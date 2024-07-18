@@ -1,7 +1,13 @@
-import { Navbar } from "./ui/navbar"
+import { Navbar } from "./ui/navbar";
+import { HeroSection } from "./ui/heroSection";
 
 const Home = () => {
-  return <Navbar />
-}
+  return (
+    <main>
+      <Navbar />
+      <HeroSection />
+    </main>
+  );
+};
 
-export default Home
+export default Home;
