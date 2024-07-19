@@ -1,5 +1,5 @@
 import { Navbar } from "./ui/navbar";
-import { HeroSection } from "./ui/heroSection";
+import { HeroSection } from "./ui/heroSection/heroSection";
 
 const Home = () => {
   return (
