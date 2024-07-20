@@ -1,14 +1,15 @@
 import { HeroImage } from "./heroImage";
-import { IBMPlexMono, inknutAntiqua } from "../fonts";
+import { Header } from "../header";
+import { inknutAntiqua } from "../fonts";
 
 export const HeroSection = () => {
   return (
     <section className="text-white ml-[3rem] flex flex-row">
       <div className="my-auto w-1/2">
-        <p
-          className={`${inknutAntiqua.className} antialiased text-[3.8rem] font-extrabold w-[70%]`}>
-          Transforming Visions into Vibrant Realities
-        </p>
+        <Header
+          text="Transforming Visions into Vibrant Realities"
+          extraStyling="w-[70%]"
+        />
 
         <p className="text-lg tracking-wider mt-5 text-gray-400">
           Helping new companies get the outreach they need
