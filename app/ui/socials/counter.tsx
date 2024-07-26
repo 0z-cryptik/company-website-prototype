@@ -27,5 +27,5 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
 
   count();
 
-  return <p className="text-2xl">{Math.ceil(value)}</p>;
+  return <p className="text-3xl font-bold">{Math.ceil(value)}</p>;
 };

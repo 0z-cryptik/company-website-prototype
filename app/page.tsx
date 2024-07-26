@@ -1,6 +1,7 @@
 import { Navbar } from "./ui/navbar";
 import { HeroSection } from "./ui/heroSection/heroSection";
 import { OurServicesPage } from "./ui/our-services/ourServicesPage";
+import { Socials } from "./ui/socials/socials";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <OurServicesPage />
+      <Socials />
     </main>
   );
 };

@@ -1,5 +1,4 @@
 import { Header } from "../header";
-import { Counter } from "../socials/counter";
 import { AllServices } from "./allServices";
 
 export const OurServicesPage = () => {
@@ -10,14 +9,6 @@ export const OurServicesPage = () => {
         extraStyling="w-fit mx-auto"
       />
       <AllServices />
-      <div className="flex flex-row gap-x-11">
-        <Counter
-          end={5000}
-          duration={3000}
-        />
-
-        <Counter end={20000} duration={2000} />
-      </div>
     </section>
   );
 };
