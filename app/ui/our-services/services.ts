@@ -5,7 +5,7 @@ interface Service {
   imageAlt: string;
 }
 
-const apos = "&#39";
+const apos = "'";
 
 export const services: Service[] = [
   {

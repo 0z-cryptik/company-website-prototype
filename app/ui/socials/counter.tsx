@@ -12,7 +12,6 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
 
   const count = (): void => {
     const interval = duration / end;
-    console.log(interval);
 
     const myInterval = setInterval(() => {
       setValue((prevValue) => {
@@ -27,5 +26,5 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
 
   count();
 
-  return <p className="text-3xl font-bold">{Math.ceil(value)}</p>;
+  return <p className="text-[1.6rem] font-bold">{Math.ceil(value)}</p>;
 };

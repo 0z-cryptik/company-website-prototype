@@ -14,14 +14,15 @@ export const SocialMedia: React.FC<Social> = ({
   Icon
 }) => {
   const nameArr = name.split(" ");
+
   return (
-    <div className="flex flex-col gap-y-7">
+    <div className="flex flex-col gap-y-3">
       {Icon}
       <Counter
         duration={counterDuration}
         end={followers}
       />
-      <div className="w-fit mx-auto">
+      <div className="w-fit mx-auto text-center">
         <p>{nameArr[0]}</p>
         <p>{nameArr[1]}</p>
       </div>
