@@ -26,7 +26,9 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
 
   const formatValue = (): string => {
     const valStr = value.toString();
-    if (value >= 10000 && value < 100000) {
+    if (value >= 1000 && value < 10000) {
+      return `${valStr[0]},${valStr[1]}${valStr[2]}${valStr[3]}+`;
+    } else if (value >= 10000 && value < 100000) {
       return `${valStr[0]}${valStr[1]},${valStr[2]}${valStr[3]}${valStr[4]}+`;
     } else if (value >= 100000) {
       return `${valStr[0]}${valStr[1]}${valStr[2]},${valStr[3]}${valStr[4]}${valStr[5]}+`;
