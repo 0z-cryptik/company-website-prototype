@@ -17,14 +17,25 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
       setValue((prevValue) => {
         if (prevValue >= end) {
           clearInterval(myInterval);
-          return end;
+          return Math.ceil(end);
         }
-        return prevValue + 1;
+        return Math.ceil(prevValue + 1);
       });
     }, interval);
   };
 
+  const formatValue = (): string => {
+    const valStr = value.toString();
+    if (value >= 10000 && value < 100000) {
+      return `${valStr[0]}${valStr[1]},${valStr[2]}${valStr[3]}${valStr[4]}+`;
+    } else if (value >= 100000) {
+      return `${valStr[0]}${valStr[1]}${valStr[2]},${valStr[3]}${valStr[4]}${valStr[5]}+`;
+    } else {
+      return valStr;
+    }
+  };
+
   count();
 
-  return <p className="text-[1.6rem] font-bold">{Math.ceil(value)}</p>;
+  return <p className="text-[1.6rem] font-bold">{formatValue()}</p>;
 };

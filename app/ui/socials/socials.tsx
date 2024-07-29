@@ -17,7 +17,7 @@ export const Socials = () => {
           />
         }
         counterDuration={5000}
-        followers={150000}
+        followers={70000}
       />
 
       <SocialMedia
@@ -65,7 +65,7 @@ export const Socials = () => {
           />
         }
         counterDuration={5000}
-        followers={150000}
+        followers={80000}
       />
 
       <SocialMedia
@@ -77,7 +77,7 @@ export const Socials = () => {
           />
         }
         counterDuration={5000}
-        followers={150000}
+        followers={90000}
       />
     </section>
   );
