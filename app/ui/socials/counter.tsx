@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Counter {
   end: number;
@@ -37,7 +37,7 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
     }
   };
 
-  count();
+  useEffect(() => {count()});
 
-  return <p className="text-[1.6rem] font-bold">{formatValue()}</p>;
+  return <p className="text-[1.6rem] font-bold w-[8rem]">{formatValue()}</p>;
 };
