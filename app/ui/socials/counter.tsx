@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 interface Counter {
   end: number;
@@ -9,6 +10,14 @@ interface Counter {
 
 export const Counter: React.FC<Counter> = ({ end, duration }) => {
   const [value, setValue] = useState(0);
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1.0
+  };
+
+  const [visible, containerRef] = useIntersectionObserver(options);
 
   const count = (): void => {
     const interval = duration / end;
@@ -33,17 +42,21 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
     } else if (value >= 100000) {
       return `${valStr[0]}${valStr[1]}${valStr[2]},${valStr[3]}${valStr[4]}${valStr[5]}+`;
     } else {
-      return valStr;
+      return `${valStr}+`;
     }
   };
 
   useEffect(() => {
-    if (value != end) {
+    if (value != end && visible) {
       count();
     }
   });
 
   return (
-    <p className="text-[1.6rem] font-bold w-[8rem]">{formatValue()}</p>
+    <p
+      ref={containerRef}
+      className="text-[1.6rem] font-bold w-[8rem]">
+      {formatValue()}
+    </p>
   );
 };
