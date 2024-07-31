@@ -17,9 +17,9 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
       setValue((prevValue) => {
         if (prevValue >= end) {
           clearInterval(myInterval);
-          return Math.ceil(end);
+          return end;
         }
-        return Math.ceil(prevValue + 1);
+        return prevValue + 1;
       });
     }, interval);
   };
@@ -37,7 +37,13 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
     }
   };
 
-  useEffect(() => {count()});
+  useEffect(() => {
+    if (value != end) {
+      count();
+    }
+  });
 
-  return <p className="text-[1.6rem] font-bold w-[8rem]">{formatValue()}</p>;
+  return (
+    <p className="text-[1.6rem] font-bold w-[8rem]">{formatValue()}</p>
+  );
 };
