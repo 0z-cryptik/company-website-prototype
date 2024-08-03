@@ -1,7 +1,10 @@
+'use client'
+
 import Image from "next/image";
 import { Header } from "../header";
 import { About } from "./aboutType";
 import { IconWrapper } from "./iconWrapper";
+import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 interface EachAboutType {
   content: About;
@@ -12,11 +15,17 @@ export const EachAbout: React.FC<EachAboutType> = ({
   content,
   reverse = false
 }) => {
-  const footerText = content.footerText.split('\n')
+  const [visible, containerRef] = useIntersectionObserver();
+  const footerText = content.footerText.split("\n");
 
   return (
-    <div className="flex flex-row mt-[4rem] gap-[5rem]">
-      <Image className={`${reverse && 'order-2'} w-1/2`}
+    <div
+      ref={containerRef}
+      className="flex flex-row mt-[4rem] gap-[5rem]">
+      <Image
+        className={`${reverse && "order-2"} ${
+          visible ? "aboutImageAnimation" : "aboutImage"
+        } w-1/2`}
         src={content.image}
         width={500}
         height={500}

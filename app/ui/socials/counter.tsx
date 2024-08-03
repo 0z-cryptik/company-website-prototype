@@ -11,13 +11,7 @@ interface Counter {
 export const Counter: React.FC<Counter> = ({ end, duration }) => {
   const [value, setValue] = useState(0);
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 1.0
-  };
-
-  const [visible, containerRef] = useIntersectionObserver(options);
+  const [visible, containerRef] = useIntersectionObserver();
 
   const count = (): void => {
     const interval = duration / end;
