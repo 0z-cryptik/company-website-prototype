@@ -36,3 +36,8 @@ body {
 .aboutImageAnimation {
   animation: slideIn 1s forwards;
 }
+
+.aboutText{
+  opacity: 0;
+  transform: translateX(-20px);
+}
