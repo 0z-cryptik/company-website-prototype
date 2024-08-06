@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import { Header } from "../header";
@@ -20,24 +20,44 @@ export const EachAbout: React.FC<EachAboutType> = ({
     rootMargin: "0px",
     threshold: 0.4
   };
-  const [visible, containerRef] = useIntersectionObserver(intersectionObserverOptions);
+
+  const [visible, containerRef] = useIntersectionObserver(
+    intersectionObserverOptions
+  );
+
   const footerText = content.footerText.split("\n");
+
+  let imageClass: string, textClass: string;
+
+  if (visible && reverse) {
+    imageClass = "order-2 aboutImageAnimation2 w-1/2";
+    textClass =
+      "aboutTextAnimation2 h-fit my-auto flex flex-col gap-y-5 w-1/2";
+  } else if (visible && !reverse) {
+    imageClass = "aboutImageAnimation w-1/2";
+    textClass =
+      "aboutTextAnimation h-fit my-auto flex flex-col gap-y-5 w-1/2";
+  } else if (reverse && !visible) {
+    imageClass = "order-2 aboutImage2 w-1/2";
+    textClass = "aboutText2 h-fit my-auto flex flex-col gap-y-5 w-1/2";
+  } else {
+    imageClass = "aboutImage w-1/2";
+    textClass = "aboutText h-fit my-auto flex flex-col gap-y-5 w-1/2";
+  }
 
   return (
     <div
       ref={containerRef}
       className="flex flex-row mt-[4rem] gap-[5rem]">
       <Image
-        className={`${reverse && "order-2"} ${
-          visible ? "aboutImageAnimation" : "aboutImage"
-        } w-1/2`}
+        className={imageClass}
         src={content.image}
         width={500}
         height={500}
         alt={content.imageAlt}
       />
 
-      <div className="h-fit my-auto flex flex-col gap-y-5 w-1/2">
+      <div className={textClass}>
         <Header
           text={content.heading}
           extraStyling="w-[70%]"
