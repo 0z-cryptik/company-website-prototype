@@ -62,3 +62,35 @@ body {
   animation: slideInRight var(--animation-duration)
     var(--animation-timing-function) forwards;
 }
+
+@keyframes borderAnimations {
+  0%,
+  100% {
+    border-left: 2px solid rgba(32, 233, 255);
+    border-top: 2px solid rgba(32, 233, 255, 0.15);
+    border-right: 2px solid rgba(32, 233, 255, 0.3);
+    border-bottom: 2px solid rgba(32, 233, 255, 0.5);
+  }
+  25% {
+    border-top: 2px solid rgba(32, 233, 255);
+    border-right: 2px solid rgba(32, 233, 255, 0.15);
+    border-bottom: 2px solid rgba(32, 233, 255, 0.3);
+    border-left: 2px solid rgba(32, 233, 255, 0.5);
+  }
+  50% {
+    border-right: 2px solid rgba(32, 233, 255);
+    border-bottom: 2px solid rgba(32, 233, 255, 0.15);
+    border-left: 2px solid rgba(32, 233, 255, 0.3);
+    border-top: 2px solid rgba(32, 233, 255, 0.5);
+  }
+  75% {
+    border-bottom: 2px solid rgba(32, 233, 255);
+    border-left: 2px solid rgba(32, 233, 255, 0.15);
+    border-top: 2px solid rgba(32, 233, 255, 0.3);
+    border-right: 2px solid rgba(32, 233, 255, 0.5);
+  }
+}
+
+.serviceAnimation {
+  animation: borderAnimations 0.7s infinite linear;
+}
