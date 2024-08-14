@@ -94,3 +94,20 @@ body {
 .serviceAnimation {
   animation: borderAnimations 0.7s infinite linear;
 }
+
+@keyframes scrollCarousel {
+  0%,
+  25%,
+  50%,
+  74% {
+    transform: translateX(0);
+  }
+  75%,
+  100% {
+    transform: translateX(-20%);
+  }
+}
+
+.scroll-content {
+  animation: scrollCarousel 5s linear infinite;
+}

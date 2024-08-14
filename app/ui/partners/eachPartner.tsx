@@ -7,9 +7,10 @@ interface Partner {
 export const EachPartner: React.FC<Partner> = ({ src }) => {
   return (
     <Image
+      className="min-w-[150px]"
       src={src}
-      height={100}
-      width={100}
+      height={150}
+      width={150}
       alt="A company logo"
     />
   );
