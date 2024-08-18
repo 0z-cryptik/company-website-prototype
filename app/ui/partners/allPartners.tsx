@@ -5,7 +5,7 @@ import { EachPartner } from "./eachPartner";
 import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 export const AllPartners = () => {
-  const [visible, containerRef] = useIntersectionObserver(0.5);
+  const [visible, containerRef] = useIntersectionObserver(0.5, false);
 
   return (
     <section
