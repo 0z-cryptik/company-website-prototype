@@ -6,17 +6,18 @@ interface Options {
   threshold: number;
 }
 
-const defaultOptions = {
-  root: null,
-  rootMargin: "0px",
-  threshold: 1.0
-};
-
 export const useIntersectionObserver = (
-  options: Options = defaultOptions
+  threshold?: number
 ): [boolean, MutableRefObject<null>] => {
   const [visible, setVisible] = useState(false);
   const containerRef = useRef(null);
+  const thresholdValue = threshold ? threshold : 1.0;
+
+  const options: Options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: thresholdValue
+  };
 
   useEffect(() => {
     //entry is destructured from an array of entries

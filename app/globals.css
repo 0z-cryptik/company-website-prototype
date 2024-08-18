@@ -96,15 +96,11 @@ body {
 }
 
 @keyframes scrollCarousel {
-  0%,
-  25%,
-  50%,
-  74% {
+  from {
     transform: translateX(0);
   }
-  75%,
-  100% {
-    transform: translateX(-20%);
+  to {
+    transform: translateX(-20svw);
   }
 }
 

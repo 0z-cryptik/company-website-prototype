@@ -15,15 +15,7 @@ export const EachAbout: React.FC<EachAboutType> = ({
   content,
   reverse = false
 }) => {
-  const intersectionObserverOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.4
-  };
-
-  const [visible, containerRef] = useIntersectionObserver(
-    intersectionObserverOptions
-  );
+  const [visible, containerRef] = useIntersectionObserver(0.4);
 
   const footerText = content.footerText.split("\n");
 
