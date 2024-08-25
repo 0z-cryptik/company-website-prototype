@@ -1,11 +1,12 @@
 "use client";
 
-import { partnersArr } from "./partners";
+import { partnersArr2 } from "./partners";
 import { EachPartner } from "./eachPartner";
 import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 export const AllPartners = () => {
   const [visible, containerRef] = useIntersectionObserver(0.5, false);
+  console.log(partnersArr2)
 
   return (
     <section
@@ -15,7 +16,7 @@ export const AllPartners = () => {
         className={`${
           visible && "scroll-content"
         } w-[100svw] grid grid-cols-10 gap-y-4 gap-x-4`}>
-        {partnersArr.map((partnerLogoLink, i) => (
+        {partnersArr2.map((partnerLogoLink, i) => (
           <EachPartner
             key={i}
             src={partnerLogoLink}
