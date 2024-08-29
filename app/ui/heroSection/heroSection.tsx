@@ -1,6 +1,6 @@
 import { HeroImage } from "./heroImage";
 import { Header } from "../header";
-import { inknutAntiqua } from "../fonts";
+import { CustomButton } from "../buttons/button";
 
 export const HeroSection = () => {
   return (
@@ -15,10 +15,7 @@ export const HeroSection = () => {
           Helping new companies get the outreach they need
         </p>
 
-        <button
-          className={`${inknutAntiqua.className} bg-gradient-to-r from-[#34a8c5] to-[#0c57ba] p-4 mt-7 rounded-2xl`}>
-          Book Now
-        </button>
+        <CustomButton>Book us</CustomButton>
       </div>
 
       <HeroImage />

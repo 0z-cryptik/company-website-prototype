@@ -1,5 +1,7 @@
+import { CustomButton } from "../buttons/button";
 import { Header } from "../header";
 import { AllEvents } from "./allEvents";
+import { FaArrowRight } from "react-icons/fa6";
 
 export const EventsPage = () => {
   return (
@@ -9,6 +11,12 @@ export const EventsPage = () => {
         extraStyling="w-fit mx-auto"
       />
       <AllEvents />
+      <center>
+        <CustomButton>
+          View more
+          <FaArrowRight className="mt-1 ml-1" />
+        </CustomButton>
+      </center>
     </section>
   );
 };
