@@ -6,7 +6,6 @@ import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 export const AllPartners = () => {
   const [visible, containerRef] = useIntersectionObserver(0.5, false);
-  console.log(partnersArr2)
 
   return (
     <section
