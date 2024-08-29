@@ -5,10 +5,11 @@ import { Socials } from "./ui/socials/socials";
 import { Divider } from "./ui/divider/divider";
 import { AboutPage } from "./ui/about/aboutPage";
 import { PartnersPage } from "./ui/partners/partnersPage";
+import { EventsPage } from "./ui/events/eventsPage";
 
 const Home = () => {
   return (
-    <main>
+    <main className="text-white">
       <Navbar />
       <HeroSection />
       <OurServicesPage />
@@ -19,6 +20,7 @@ const Home = () => {
       <Divider />
       <PartnersPage />
       <Divider />
+      <EventsPage />
     </main>
   );
 };

@@ -2,7 +2,7 @@ import { bodoniModa, bebasNeue } from "./fonts";
 
 export const Navbar = () => {
   return (
-    <nav className="pt-7 pl-[3rem] pr-[7rem] flex flex-row text-white">
+    <nav className="pt-7 pl-[3rem] pr-[7rem] flex flex-row">
       <p
         className={`${bebasNeue.className} text-3xl antialiased flex-grow`}>
         BlueWave

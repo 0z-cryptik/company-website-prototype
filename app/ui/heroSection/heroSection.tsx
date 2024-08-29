@@ -4,7 +4,7 @@ import { inknutAntiqua } from "../fonts";
 
 export const HeroSection = () => {
   return (
-    <section className="text-white ml-[3rem] flex flex-row">
+    <section className="ml-[3rem] flex flex-row">
       <div className="my-auto w-1/2">
         <Header
           text="Transforming Visions into Vibrant Realities"

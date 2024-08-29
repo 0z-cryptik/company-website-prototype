@@ -1,14 +1,14 @@
 import { Header } from "../header";
-import { AllPartners } from "./allPartners";
+import { AllEvents } from "./allEvents";
 
-export const PartnersPage = () => {
+export const EventsPage = () => {
   return (
     <section className="mt-[5rem]">
       <Header
-        text="Our Partners"
+        text="Recent Events"
         extraStyling="w-fit mx-auto"
       />
-      <AllPartners />
+      <AllEvents />
     </section>
   );
 };
