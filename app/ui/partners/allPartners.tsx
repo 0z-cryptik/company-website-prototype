@@ -15,7 +15,7 @@ export const AllPartners = () => {
       <div
         className={`${
           visible && "scroll-content"
-        } w-[100svw] grid grid-cols-10 gap-y-4 gap-x-4`}>
+        } w-[100svw] grid grid-cols-10 gap-y-10 gap-x-4`}>
         {partnersArr2.map((partnerLogoLink, i) => (
           <EachPartner
             key={i}
