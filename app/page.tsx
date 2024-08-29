@@ -18,6 +18,7 @@ const Home = () => {
       <AboutPage />
       <Divider />
       <PartnersPage />
+      <Divider />
     </main>
   );
 };

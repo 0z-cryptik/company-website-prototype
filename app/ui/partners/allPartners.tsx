@@ -10,7 +10,7 @@ export const AllPartners = () => {
   return (
     <section
       ref={containerRef}
-      className="overflow-hidden w-[80svw] mx-auto mt-[3rem]">
+      className="overflow-hidden w-[80svw] mx-auto mt-[3rem] mb-[7rem]">
       <div
         className={`${
           visible && "scroll-content"
