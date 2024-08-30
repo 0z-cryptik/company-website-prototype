@@ -7,7 +7,7 @@ interface Event {
 
 export const EachEvent: React.FC<Event> = ({ title, src }) => {
   return (
-    <div className="rounded-xl font-mono backdrop-blur-md bg-slate-700 pb-3">
+    <div className="rounded-xl font-mono bg-slate-600/30 pb-3">
       <div className="p-5">
         <Image
           className="rounded-xl"

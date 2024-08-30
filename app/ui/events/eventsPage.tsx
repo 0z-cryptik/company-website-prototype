@@ -11,7 +11,7 @@ export const EventsPage = () => {
         extraStyling="w-fit mx-auto"
       />
       <AllEvents />
-      <center>
+      <center className="mt-[5rem]">
         <CustomButton>
           View more
           <FaArrowRight className="mt-1 ml-1" />
