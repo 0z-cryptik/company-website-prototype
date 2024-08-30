@@ -6,6 +6,7 @@ import { Divider } from "./ui/divider/divider";
 import { AboutPage } from "./ui/about/aboutPage";
 import { PartnersPage } from "./ui/partners/partnersPage";
 import { EventsPage } from "./ui/events/eventsPage";
+import { TeamPage } from "./ui/team/TeamPage";
 
 const Home = () => {
   return (
@@ -21,6 +22,9 @@ const Home = () => {
       <PartnersPage />
       <Divider />
       <EventsPage />
+      <Divider />
+      <TeamPage />
+      <Divider />
     </main>
   );
 };

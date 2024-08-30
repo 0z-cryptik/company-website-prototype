@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export const EventsPage = () => {
   return (
-    <section className="mt-[5rem]">
+    <section className="mt-[5rem] mb-[7rem]">
       <Header
         text="Recent Events"
         extraStyling="w-fit mx-auto"

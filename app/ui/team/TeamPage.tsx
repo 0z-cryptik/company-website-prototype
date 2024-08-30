@@ -1,14 +1,14 @@
 import { Header } from "../header";
-import { AllPartners } from "./allPartners";
+import { AllTeamMembers } from "./allTeamMembers";
 
-export const PartnersPage = () => {
+export const TeamPage = () => {
   return (
     <section className="mt-[5rem] mb-[7rem]">
       <Header
-        text="Our Partners"
+        text="Meet Our Team"
         extraStyling="w-fit mx-auto"
       />
-      <AllPartners />
+      <AllTeamMembers />
     </section>
   );
 };
