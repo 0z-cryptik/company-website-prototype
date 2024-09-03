@@ -108,7 +108,3 @@ body {
 .scroll-content {
   animation: scrollCarousel 5s linear infinite;
 }
-
-.raise {
-  transform: translateY(-2rem);
-}

@@ -16,7 +16,10 @@ export const EachTeamMember: React.FC<TeamMember> = ({
   raise
 }) => {
   return (
-    <figure className={`${raise && "raise"} font-mono  border rounded-xl`}>
+    <figure
+      className={`${
+        raise && "translate-y-[-2rem]"
+      } font-mono  border rounded-xl`}>
       <Image
         className="rounded-t-xl"
         src={src}
