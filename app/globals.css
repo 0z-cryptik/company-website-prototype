@@ -96,14 +96,12 @@ body {
 }
 
 @keyframes scrollCarousel {
-  0% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
     transform: translateX(-20svw);
-  }
-  100%{
-    transform: translateX(0);
   }
 }
 
@@ -111,6 +109,6 @@ body {
   animation: scrollCarousel 5s linear infinite;
 }
 
-.raise{
+.raise {
   transform: translateY(-2rem);
 }
