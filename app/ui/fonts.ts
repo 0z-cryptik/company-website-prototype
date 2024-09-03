@@ -2,7 +2,8 @@ import {
   Bodoni_Moda,
   Bebas_Neue,
   IBM_Plex_Mono,
-  Inknut_Antiqua
+  Inknut_Antiqua,
+  Space_Grotesk
 } from "next/font/google";
 
 export const bodoniModa = Bodoni_Moda({ subsets: ["latin"] });
@@ -14,4 +15,8 @@ export const IBMPlexMono = IBM_Plex_Mono({
 export const inknutAntiqua = Inknut_Antiqua({
   subsets: ["latin"],
   weight: "400"
+});
+export const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: "300"
 });

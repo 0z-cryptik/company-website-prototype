@@ -1,4 +1,4 @@
-import { Navbar } from "./ui/navbar";
+import { Navbar } from "./ui/navbar/navbar";
 import { HeroSection } from "./ui/heroSection/heroSection";
 import { OurServicesPage } from "./ui/our-services/ourServicesPage";
 import { Socials } from "./ui/socials/socials";
@@ -7,6 +7,7 @@ import { AboutPage } from "./ui/about/aboutPage";
 import { PartnersPage } from "./ui/partners/partnersPage";
 import { EventsPage } from "./ui/events/eventsPage";
 import { TeamPage } from "./ui/team/TeamPage";
+import { LastPage } from "./ui/last-page/lastPage";
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
       <Divider />
       <TeamPage />
       <Divider />
+      <LastPage />
     </main>
   );
 };

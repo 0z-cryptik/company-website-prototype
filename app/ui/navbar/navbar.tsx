@@ -1,14 +1,12 @@
-import { bodoniModa, bebasNeue } from "./fonts";
+import { bebasNeue } from "../fonts";
+import { Logo } from "../logo/logo";
 
 export const Navbar = () => {
   return (
     <nav className="pt-7 pl-[3rem] pr-[7rem] flex flex-row">
-      <p
-        className={`${bebasNeue.className} text-3xl antialiased flex-grow`}>
-        BlueWave
-      </p>
+      <Logo size="3xl" />
 
-      <div className="w-fit flex gap-x-12 font-semibold text-lg">
+      <div className="ml-auto w-fit flex gap-x-12 font-semibold text-lg">
         <a>Home</a>
         <a>About</a>
         <a>Services</a>
