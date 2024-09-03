@@ -4,12 +4,14 @@ import { spaceGrotesk } from "../fonts";
 
 export const LastPage = () => {
   return (
-    <section className="mt-[10rem] w-[85%] mx-auto pb-[7rem] border-b">
+    <section className="mt-[10rem] w-[85%] mx-auto pb-[7rem] border-b-[0.5px] border-gray-400">
       <center>
         <Logo size="6xl" />
 
-        <p className={`${spaceGrotesk.className} mt-[4rem] text-xl w-[55%]`}>
-        Empowering brands to connect, engage, and grow with innovative marketing solutions.
+        <p
+          className={`${spaceGrotesk.className} mt-[4rem] text-xl w-[55%]`}>
+          Empowering brands to connect, engage, and grow with innovative
+          marketing solutions.
         </p>
 
         <SocialMediaIcons />

@@ -8,6 +8,7 @@ import { PartnersPage } from "./ui/partners/partnersPage";
 import { EventsPage } from "./ui/events/eventsPage";
 import { TeamPage } from "./ui/team/TeamPage";
 import { LastPage } from "./ui/last-page/lastPage";
+import { Footer } from "./ui/footer/footer";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
       <TeamPage />
       <Divider />
       <LastPage />
+      <Footer />
     </main>
   );
 };
