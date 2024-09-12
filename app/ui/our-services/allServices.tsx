@@ -3,7 +3,7 @@ import { EachService } from "./eachService/eachService";
 
 export const AllServices = () => {
   return (
-    <section className="grid grid-cols-2 gap-[3rem] mx-[10rem] mt-[3rem]">
+    <section className="grid lg:grid-cols-2 gap-3 lg:gap-[3rem] lg:mx-[10rem] mt-[3rem] max-lg:px-5">
       {services.map((service, i) => (
         <EachService
           key={i}
