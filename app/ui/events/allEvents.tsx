@@ -3,7 +3,7 @@ import { EachEvent } from "./eachEvent";
 
 export const AllEvents = () => {
   return (
-    <div className="flex flex-row gap-[5rem] w-[90%] mx-auto mt-[3rem]">
+    <div className="lg:flex lg:flex-row gap-[5rem] w-[90%] mx-auto mt-[3rem]">
       <EachEvent
         src="/recentEvents/event1.png"
         title="Marketing Event 1"

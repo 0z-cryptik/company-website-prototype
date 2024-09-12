@@ -2,7 +2,7 @@ import { EachTeamMember } from "./eachTeamMember";
 
 export const AllTeamMembers = () => {
   return (
-    <div className="flex flex-row gap-10 w-[85%] mx-auto mt-[5rem]">
+    <div className="lg:flex lg:flex-row gap-10 w-[85%] mx-auto mt-[5rem]">
       <EachTeamMember
         name="Anne"
         src="/team/1.jpg"

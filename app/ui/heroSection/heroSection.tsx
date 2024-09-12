@@ -3,19 +3,21 @@ import { Header } from "../header";
 import { CustomButton } from "../buttons/button";
 
 export const HeroSection = () => {
+  const header = "Turning Visions Into Vibrant Realities";
+
   return (
-    <section className="ml-[3rem] flex flex-row">
-      <div className="my-auto w-1/2">
+    <section className="lg:ml-[3rem] max-lg:w-[100svw] lg:flex lg:flex-row max-lg:text-center max-lg:pt-[10rem]">
+      <div className="my-auto lg:w-1/2 max-lg:max-w-[80%] mx-auto">
         <Header
-          text="Transforming Visions into Vibrant Realities"
-          extraStyling="w-[70%]"
+          text={header}
+          extraStyling="lg:w-[70%] max-lg:leading-[3rem]"
         />
 
         <p className="text-lg tracking-wider mt-5 text-gray-400">
           Helping new companies get the outreach they need
         </p>
 
-        <CustomButton>Book us</CustomButton>
+        <CustomButton extraStyling="max-lg:mx-auto">Book us</CustomButton>
       </div>
 
       <HeroImage />

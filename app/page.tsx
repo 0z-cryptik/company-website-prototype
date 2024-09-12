@@ -12,9 +12,10 @@ import { Footer } from "./ui/footer/footer";
 
 const Home = () => {
   return (
-    <main className="text-white">
+    <main className="text-white max-lg:w-[100svw] max-lg:overflow-hidden">
       <Navbar />
       <HeroSection />
+      <Divider />
       <OurServicesPage />
       <Divider />
       <Socials />
