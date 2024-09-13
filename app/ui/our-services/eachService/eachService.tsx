@@ -29,7 +29,7 @@ export const EachService: React.FC<EachServiceProps> = ({
       }}
       className={`${
         hovering ? "serviceAnimation" : "border-2 border-transparent"
-      } flex flex-row gap-x-4 lg:gap-x-[2rem] bg-blue-200/5 rounded-3xl px-3 lg:px-[2rem] py-5 lg:py-[3rem]`}>
+      } flex flex-row gap-x-4 md:gap-x-[2rem] bg-blue-200/5 rounded-3xl px-3 md:px-[2rem] py-5 md:py-[3rem]`}>
       <Image
         className="max-h-[70%]"
         src={image}
@@ -39,10 +39,10 @@ export const EachService: React.FC<EachServiceProps> = ({
       />
       <div>
         <h1
-          className={`${inknutAntiqua.className} antialiased  text-lg lg:text-2xl font-extrabold`}>
+          className={`${inknutAntiqua.className} antialiased text-lg md:text-2xl font-extrabold`}>
           {heading}
         </h1>
-        <p className="mt-5 text-xs">{text}</p>
+        <p className="mt-5 text-xs lg:text-base">{text}</p>
       </div>
     </div>
   );
