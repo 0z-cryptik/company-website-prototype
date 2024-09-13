@@ -6,7 +6,7 @@ import { FaRedditAlien, FaTelegram } from "react-icons/fa6";
 export const SocialMediaIcons = () => {
     const iconSize = '1.7rem'
   return (
-    <div className="lg:flex lg:flex-row w-fit mx-auto gap-5 mt-[3rem]">
+    <div className="flex flex-row lg:w-fit items-center justify-center gap-4 lg:mx-auto lg:gap-5 mt-[3rem]">
       <ImFacebook2 size={iconSize} />
       <BsTwitterX size={iconSize} />
       <AiFillInstagram size={iconSize} />

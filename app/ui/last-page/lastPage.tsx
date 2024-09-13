@@ -9,7 +9,7 @@ export const LastPage = () => {
         <Logo size="6xl" />
 
         <p
-          className={`${spaceGrotesk.className} mt-[4rem] text-xl w-[55%]`}>
+          className={`${spaceGrotesk.className} mt-[4rem] lg:text-xl lg:w-[55%]`}>
           Empowering brands to connect, engage, and grow with innovative
           marketing solutions.
         </p>
