@@ -17,8 +17,8 @@ export const EachEvent: React.FC<Event> = ({ title, src }) => {
           height={400}
         />
       </div>
-      <p className="text-center text-lg font-semibold">{title}</p>
-      <p className="text-center text-xs font-thin mt-2">Recent Event</p>
+      <p className="text-center lg:text-lg text-sm font-semibold">{title}</p>
+      <p className="text-center text-xs font-thin mt-2 hidden lg:block">Recent Event</p>
     </div>
   );
 };
