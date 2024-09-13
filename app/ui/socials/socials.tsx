@@ -12,7 +12,7 @@ export const Socials = () => {
   const sizeClass = "";
 
   return (
-    <section className="lg:flex lg:flex-row lg:gap-x-[5rem] w-fit mx-auto my-[7rem]">
+    <section className="lg:flex grid grid-cols-2 lg:flex-row max-lg:gap-y-[3rem] lg:gap-x-[5rem] lg:w-fit mx-auto my-[7rem]">
       <SocialMedia
         name="X(Twitter) followers"
         Icon={

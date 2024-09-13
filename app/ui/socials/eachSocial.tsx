@@ -23,8 +23,9 @@ export const SocialMedia: React.FC<Social> = ({
         end={followers}
       />
       <div className="w-fit mx-auto text-center">
-        <p>{nameArr[0]}</p>
-        <p>{nameArr[1]}</p>
+        <p className="hidden lg:block">{nameArr[0]}</p>
+        <p className="hidden lg:block">{nameArr[1]}</p>
+        <p className="lg:hidden">{nameArr[0]} {nameArr[1]}</p>
       </div>
     </div>
   );
