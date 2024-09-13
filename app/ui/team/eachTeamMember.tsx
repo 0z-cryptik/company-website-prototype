@@ -18,8 +18,8 @@ export const EachTeamMember: React.FC<TeamMember> = ({
   return (
     <figure
       className={`${
-        raise && "translate-y-[-2rem]"
-      } font-mono  border rounded-xl`}>
+        raise && "lg:translate-y-[-2rem]"
+      } font-mono border rounded-xl`}>
       <Image
         className="rounded-t-xl"
         src={src}
@@ -28,7 +28,7 @@ export const EachTeamMember: React.FC<TeamMember> = ({
         alt={desc}
       />
 
-      <figcaption className="py-7">
+      <figcaption className="py-2 lg:py-7">
         <p className="text-center text-lg font-semibold">{name}</p>
         <p className="text-center text-xs font-thin mt-2">{position}</p>
       </figcaption>
