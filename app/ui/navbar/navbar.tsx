@@ -21,7 +21,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`pt-7 lg:pl-[3rem] pl-4 lg:pr-[7rem] pr-4 flex flex-row fixed w-[100%] z-30 transition-colors duration-300 ${
+      className={`pt-7 lg:pl-[3rem] pl-4 lg:pr-[7rem] pr-4 flex flex-row fixed w-[100%] z-10 transition-colors duration-300 ${
         isScrolled ? "bg-[#0e1e70]" : "bg-transparent"
       }`}>
       <Logo size="3xl" />

@@ -4,10 +4,6 @@ import { useList } from "@/app/hooks/context";
 export const MenuButton = () => {
   const { menuOpen, setMenuOpen } = useList();
 
-  if(menuOpen){
-    console.log('menu open')
-  }
-
   return (
     <button
       onClick={() => {
