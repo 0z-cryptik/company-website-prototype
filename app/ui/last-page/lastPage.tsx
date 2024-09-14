@@ -6,7 +6,7 @@ export const LastPage = () => {
   return (
     <section className="mt-[10rem] w-[85%] mx-auto pb-[7rem] border-b-[0.5px] border-gray-400">
       <center>
-        <Logo size="6xl" />
+        <Logo size="text-6xl" />
 
         <p
           className={`${spaceGrotesk.className} mt-[4rem] lg:text-xl lg:w-[55%]`}>

@@ -8,7 +8,7 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({ size, additionalStyling }) => {
   return (
     <p
-      className={`${bebasNeue.className} ${additionalStyling} text-${size} antialiased`}>
+      className={`${bebasNeue.className} ${additionalStyling} ${size} antialiased`}>
       BlueWave
     </p>
   );
