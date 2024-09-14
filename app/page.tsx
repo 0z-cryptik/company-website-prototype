@@ -9,28 +9,31 @@ import { EventsPage } from "./ui/events/eventsPage";
 import { TeamPage } from "./ui/team/TeamPage";
 import { LastPage } from "./ui/last-page/lastPage";
 import { Footer } from "./ui/footer/footer";
+import { StateProvider } from "./hooks/context";
 
 const Home = () => {
   return (
-    <main className="text-white max-lg:w-[100svw] max-lg:overflow-hidden">
-      <Navbar />
-      <HeroSection />
-      <Divider />
-      <OurServicesPage />
-      <Divider />
-      <Socials />
-      <Divider />
-      <AboutPage />
-      <Divider />
-      <PartnersPage />
-      <Divider />
-      <EventsPage />
-      <Divider />
-      <TeamPage />
-      <Divider />
-      <LastPage />
-      <Footer />
-    </main>
+    <StateProvider>
+      <main className="text-white max-lg:w-[100svw] max-lg:overflow-hidden">
+        <Navbar />
+        <HeroSection />
+        <Divider />
+        <OurServicesPage />
+        <Divider />
+        <Socials />
+        <Divider />
+        <AboutPage />
+        <Divider />
+        <PartnersPage />
+        <Divider />
+        <EventsPage />
+        <Divider />
+        <TeamPage />
+        <Divider />
+        <LastPage />
+        <Footer />
+      </main>
+    </StateProvider>
   );
 };
 

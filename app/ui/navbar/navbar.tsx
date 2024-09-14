@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Logo } from "../logo/logo";
-import { IoMdMenu } from "react-icons/io";
+import { MenuButton } from "../hambuggerMenu/menuButton";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,9 +34,7 @@ export const Navbar = () => {
         <a>Team</a>
       </div>
 
-      <button className="ml-auto lg:hidden">
-        <IoMdMenu size={35} />
-      </button>
+      <MenuButton />
     </nav>
   );
 };
