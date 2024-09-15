@@ -14,13 +14,12 @@ export const HamburgerMenu = () => {
     }`,
     transition: "transform .3s linear",
     zIndex: "20",
-    position: "fixed"
   };
 
   return (
     <main
       style={styleObj}
-      className="h-screen w-screen bg-[#111129] text-white">
+      className="h-screen w-screen bg-[#111129] text-white fixed">
       <div className="border-b-[0.5px] border-b-gray-600 py-2">
         <button
           onClick={() => {

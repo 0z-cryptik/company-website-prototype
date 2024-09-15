@@ -49,7 +49,7 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
   return (
     <p
       ref={containerRef}
-      className="text-[1.6rem] font-bold w-fit mx-auto">
+      className="text-[1.6rem] font-bold max-md:w-fit md:w-[122.45px] text-center mx-auto">
       {formatValue()}
     </p>
   );
