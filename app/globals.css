@@ -45,9 +45,7 @@ body {
 }
 
 .aboutImage,
-.aboutImage2,
-.aboutText,
-.aboutText2 {
+.aboutText {
   opacity: 0;
 }
 

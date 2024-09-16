@@ -5,6 +5,7 @@ import { Header } from "../header";
 import { About } from "./aboutType";
 import { IconWrapper } from "./iconWrapper";
 import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
+import { EachPhoneAbout } from "./phoneScreenAbout";
 
 interface EachAboutType {
   content: About;
@@ -30,39 +31,46 @@ export const EachAbout: React.FC<EachAboutType> = ({
     textClass =
       "aboutTextAnimation h-fit my-auto flex flex-col gap-y-5 w-1/2";
   } else if (reverse && !visible) {
-    imageClass = "order-2 aboutImage2 w-1/2";
-    textClass = "aboutText2 h-fit my-auto flex flex-col gap-y-5 w-1/2";
+    imageClass = "order-2 aboutImage w-1/2";
+    textClass = "aboutText h-fit my-auto flex flex-col gap-y-5 w-1/2";
   } else {
     imageClass = "aboutImage w-1/2";
     textClass = "aboutText h-fit my-auto flex flex-col gap-y-5 w-1/2";
   }
 
   return (
-    <div
-      ref={containerRef}
-      className="flex flex-row mt-[4rem] gap-[5rem]">
-      <Image
-        className={imageClass}
-        src={content.image}
-        width={500}
-        height={500}
-        alt={content.imageAlt}
-      />
-
-      <div className={textClass}>
-        <Header
-          text={content.heading}
-          extraStyling="w-[70%]"
+    <section className="">
+      <div
+        ref={containerRef}
+        className="hidden lg:flex flex-row mt-[4rem] gap-[5rem]">
+        <Image
+          className={imageClass}
+          src={content.image}
+          width={500}
+          height={500}
+          alt={content.imageAlt}
         />
-        <p className="text-lg">{content.text}</p>
-        <div className="flex flex-row gap-3">
-          <IconWrapper icon={content.footerIcon} />
-          <div className="text-sm font-thin h-fit my-auto">
-            <p>{footerText[0]}</p>
-            <p>{footerText[1]}</p>
+
+        <div className={textClass}>
+          <Header
+            text={content.heading}
+            extraStyling="w-[70%]"
+          />
+          <p className="text-lg">{content.text}</p>
+          <div className="flex flex-row gap-3">
+            <IconWrapper icon={content.footerIcon} />
+            <div className="text-sm font-thin h-fit my-auto">
+              <p>{footerText[0]}</p>
+              <p>{footerText[1]}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <EachPhoneAbout
+        content={content}
+        reverse={reverse}
+      />
+    </section>
   );
 };

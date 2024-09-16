@@ -7,7 +7,7 @@ export const AboutPage = () => {
     <section className="mt-[5rem] mb-[7rem] lg:px-[5rem]">
       <Header
         text="About Us"
-        extraStyling="w-fit mx-auto"
+        extraStyling="w-fit mx-auto max-lg:hidden"
       />
 
       <EachAbout content={about[0]} />
