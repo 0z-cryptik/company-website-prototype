@@ -110,16 +110,31 @@ body {
 .heroSectionComponent1 {
   opacity: 0;
   transform: translateY(45px);
-  transition: opacity 0.2s ease, transform 0.4s cubic-bezier(0,1.85,.57,.95);
+  transition: opacity 0.2s ease,
+    transform 0.4s cubic-bezier(0, 1.85, 0.57, 0.95);
 }
 
-.heroSectionComponent2{
+.heroSectionComponent2 {
   opacity: 0;
   transform: translate(-40px, 40px);
-  transition: opacity 0.2s ease, transform 0.7s cubic-bezier(0,1.85,.73,.81);
+  transition: opacity 0.2s ease,
+    transform 0.7s cubic-bezier(0, 1.85, 0.73, 0.81);
 }
 
-.heroSectionComponent1Animation,.heroSectionComponent2Animation{
+.heroSectionComponent1Animation,
+.heroSectionComponent2Animation {
   opacity: 1;
-  transform: translate(0,0);
+  transform: translate(0, 0);
+}
+
+.eachService {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.05s ease, transform 0.2s ease;
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.serviceStaggerEffect {
+  opacity: 1;
+  transform: translateY(0);
 }

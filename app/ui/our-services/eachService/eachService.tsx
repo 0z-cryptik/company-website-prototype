@@ -9,13 +9,17 @@ interface EachServiceProps {
   heading: string;
   text: string;
   imageAlt: string;
+  delayOrder: number;
+  animate: boolean;
 }
 
 export const EachService: React.FC<EachServiceProps> = ({
   image,
   heading,
   text,
-  imageAlt
+  imageAlt,
+  delayOrder,
+  animate
 }) => {
   const [hovering, setHovering] = useState(false);
 
@@ -27,9 +31,12 @@ export const EachService: React.FC<EachServiceProps> = ({
       onMouseLeave={() => {
         setHovering(false);
       }}
-      className={`${
+      className={`eachService ${
         hovering ? "serviceAnimation" : "border-2 border-transparent"
-      } flex flex-row gap-x-4 md:gap-x-[2rem] bg-blue-200/5 rounded-3xl px-3 md:px-[2rem] py-5 md:py-[3rem]`}>
+      } flex flex-row gap-x-4 md:gap-x-[2rem] bg-blue-200/5 rounded-3xl px-3 md:px-[2rem] py-5 md:py-[3rem] ${
+        animate && "serviceStaggerEffect"
+      }`}
+      style={{ "--i": delayOrder.toString() } as React.CSSProperties}>
       <Image
         className="max-h-[70%]"
         src={image}
