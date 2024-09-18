@@ -116,10 +116,11 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-.eachPartner{
+.eachPartner {
   opacity: 0;
   transform: scale(0.1);
-  transition: opacity 0.2s linear, transform 0.5s cubic-bezier(.17,.67,.66,1.43);
+  transition: opacity 0.2s linear,
+    transform 0.5s cubic-bezier(0.17, 0.67, 0.66, 1.43);
 }
 
 .scaleUp {
@@ -150,11 +151,34 @@ body {
 .eachService {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.05s ease, transform 0.2s ease;
+  transition: opacity 0.05s ease,
+    transform 0.5s cubic-bezier(0.37, 0.85, 0.68, 1.24);
   transition-delay: calc(0.1s * var(--i));
 }
 
-.serviceStaggerEffect {
+.eachEvent {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.05s ease,
+    transform 0.5s cubic-bezier(0.37, 0.85, 0.68, 1.24);
+  transition-delay: calc(0.1s * var(--i));
+}
+
+.serviceStaggerEffect,
+.eventStaggerEffect {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.viewMoreButton {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.05s ease,
+    transform 0.5s cubic-bezier(0.22, 1.49, 0.58, 1.65);
+  transition-delay: 0.4s;
+}
+
+.viewMoreButtonAnimation {
   opacity: 1;
   transform: translateY(0);
 }
