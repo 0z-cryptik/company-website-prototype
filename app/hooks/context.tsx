@@ -11,6 +11,8 @@ import {
 interface Context {
   menuOpen: boolean;
   setMenuOpen: Dispatch<SetStateAction<boolean>>;
+  pageLoaded: boolean;
+  setPageLoaded: Dispatch<SetStateAction<boolean>>;
 }
 
 const myContext = createContext<Context | undefined>(undefined);
@@ -31,9 +33,11 @@ interface GlobalState {
 
 export const StateProvider: React.FC<GlobalState> = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pageLoaded, setPageLoaded] = useState(false);
 
   return (
-    <myContext.Provider value={{ menuOpen, setMenuOpen }}>
+    <myContext.Provider
+      value={{ menuOpen, setMenuOpen, pageLoaded, setPageLoaded }}>
       {children}
     </myContext.Provider>
   );

@@ -1,13 +1,28 @@
+"use client";
 import { HeroImage } from "./heroImage";
 import { Header } from "../header";
 import { CustomButton } from "../buttons/button";
+import { useEffect } from "react";
+import { useList } from "@/app/hooks/context";
 
 export const HeroSection = () => {
   const header = "Turning Visions Into Vibrant Realities";
+  const { pageLoaded, setPageLoaded } = useList();
+
+  //makes sure the code is being ran in a browser
+  if (
+    typeof window !== "undefined" &&
+    document.readyState === "complete"
+  ) {
+    setPageLoaded(true);
+  }
 
   return (
     <section className="lg:ml-[3rem] max-lg:w-[100svw] lg:flex lg:flex-row max-lg:text-center max-lg:pt-[10rem] lg:pt-[2.5rem]">
-      <div className="my-auto lg:w-1/2 max-lg:max-w-[80%] mx-auto">
+      <div
+        className={`heroSectionComponent1 my-auto lg:w-1/2 max-lg:max-w-[80%] mx-auto ${
+          pageLoaded && "heroSectionComponent1Animation"
+        }`}>
         <Header
           text={header}
           extraStyling="lg:w-[70%] max-lg:leading-[3rem]"
