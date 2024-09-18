@@ -2,12 +2,15 @@ import Image from "next/image";
 
 interface Partner {
   src: string;
+  scaleUp: boolean;
 }
 
-export const EachPartner: React.FC<Partner> = ({ src }) => {
+export const EachPartner: React.FC<Partner> = ({ src, scaleUp }) => {
   return (
     <Image
-      className="min-w-[10px] my-auto"
+      className={`eachPartner ${
+        scaleUp && "scaleUp"
+      } min-w-[10px] my-auto`}
       src={src}
       height={100}
       width={100}

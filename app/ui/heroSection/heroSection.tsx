@@ -2,7 +2,6 @@
 import { HeroImage } from "./heroImage";
 import { Header } from "../header";
 import { CustomButton } from "../buttons/button";
-import { useEffect } from "react";
 import { useList } from "@/app/hooks/context";
 
 export const HeroSection = () => {

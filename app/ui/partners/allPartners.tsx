@@ -1,24 +1,40 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { partnersArr2 } from "./partners";
 import { EachPartner } from "./eachPartner";
 import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 export const AllPartners = () => {
-  const [visible, containerRef] = useIntersectionObserver(0.5, false);
+  const [visible, containerRef] = useIntersectionObserver(0.7);
+  const [startScrolling, setStartScrolling] = useState(false);
+
+  useEffect(() => {
+    if (visible) {
+      // Delay the scrolling animation to allow the scale-up to happen first
+      const timeoutId = setTimeout(() => {
+        setStartScrolling(true);
+      }, 600); // Delay of 500ms to match the scaling transition
+
+      return () => clearTimeout(timeoutId); // Cleanup if component unmounts
+    } else {
+      setStartScrolling(false);
+    }
+  }, [visible]);
 
   return (
     <section
       ref={containerRef}
-      className="overflow-hidden w-[80svw] mx-auto mt-[3rem]">
+      className={`overflow-hidden w-[80svw] mx-auto mt-[3rem]`}>
       <div
-        className={`${
-          visible && "scroll-content"
+        className={`partners ${
+          startScrolling && "scroll-content"
         } w-[100svw] grid grid-cols-10 gap-y-10 gap-x-4`}>
         {partnersArr2.map((partnerLogoLink, i) => (
           <EachPartner
             key={i}
             src={partnerLogoLink}
+            scaleUp={visible}
           />
         ))}
       </div>

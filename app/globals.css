@@ -22,6 +22,10 @@ body {
   --animation-timing-function: cubic-bezier(0, 1.93, 0.88, 0.92);
 }
 
+#socialsSection {
+  transform: translate3d(0, 0, 0);
+}
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -105,6 +109,22 @@ body {
 
 .scroll-content {
   animation: scrollCarousel 5s linear infinite;
+  animation-delay: 0.5s; /* Starts after scaling finishes */
+}
+
+.partners {
+  transform: translate3d(0, 0, 0);
+}
+
+.eachPartner{
+  opacity: 0;
+  transform: scale(0.1);
+  transition: opacity 0.2s linear, transform 0.5s cubic-bezier(.17,.67,.66,1.43);
+}
+
+.scaleUp {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .heroSectionComponent1 {
