@@ -1,8 +1,13 @@
 import Image from "next/image";
+import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 export const Divider = () => {
+  const [visible, containerRef] = useIntersectionObserver();
+
   return (
-    <center>
+    <center
+      ref={containerRef}
+      className={`divider ${visible && "dividerAnimation"}`}>
       <Image
         src={"./divider.svg"}
         alt="page divider"

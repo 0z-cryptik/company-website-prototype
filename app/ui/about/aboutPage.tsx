@@ -1,11 +1,11 @@
-import { Header } from "../header";
+import { AnimatedHeader } from "../header";
 import { about } from "./aboutArray";
 import { EachAbout } from "./eachAbout";
 
 export const AboutPage = () => {
   return (
     <section className="mt-[5rem] mb-[7rem] lg:px-[5rem]">
-      <Header
+      <AnimatedHeader
         text="About Us"
         extraStyling="w-fit mx-auto max-lg:hidden"
       />

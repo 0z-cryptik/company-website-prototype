@@ -1,5 +1,5 @@
 import { CustomButton } from "../buttons/button";
-import { Header } from "../header";
+import { AnimatedHeader } from "../header";
 import { AllEvents } from "./allEvents";
 import { FaArrowRight } from "react-icons/fa6";
 import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
@@ -9,7 +9,7 @@ export const EventsPage = () => {
 
   return (
     <section className="mt-[5rem] mb-[7rem] max-lg:px-4">
-      <Header
+      <AnimatedHeader
         text="Recent Events"
         extraStyling="w-fit mx-auto"
       />

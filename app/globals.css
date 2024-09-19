@@ -170,7 +170,8 @@ body {
   transform: translateY(0);
 }
 
-.viewMoreButton {
+.viewMoreButton,
+.divider, .header {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.05s ease,
@@ -178,7 +179,9 @@ body {
   transition-delay: 0.4s;
 }
 
-.viewMoreButtonAnimation {
+.viewMoreButtonAnimation,
+.dividerAnimation,
+.headerAnimation {
   opacity: 1;
   transform: translateY(0);
 }

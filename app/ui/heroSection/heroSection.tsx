@@ -1,6 +1,6 @@
 "use client";
 import { HeroImage } from "./heroImage";
-import { Header } from "../header";
+import { NonAnimatedHeader } from "../header";
 import { CustomButton } from "../buttons/button";
 import { useList } from "@/app/hooks/context";
 
@@ -22,7 +22,7 @@ export const HeroSection = () => {
         className={`heroSectionComponent1 my-auto lg:w-1/2 max-lg:max-w-[80%] mx-auto ${
           pageLoaded && "heroSectionComponent1Animation"
         }`}>
-        <Header
+        <NonAnimatedHeader
           text={header}
           extraStyling="lg:w-[70%] max-lg:leading-[3rem]"
         />

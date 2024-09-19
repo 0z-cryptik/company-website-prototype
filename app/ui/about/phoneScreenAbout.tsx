@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Header } from "../header";
+import { NonAnimatedHeader } from "../header";
 import { About } from "./aboutType";
 import { IconWrapper } from "./iconWrapper";
 import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
@@ -38,7 +38,7 @@ export const EachPhoneAbout: React.FC<EachAboutType> = ({
     <div
       ref={containerRef}
       className="lg:hidden flex flex-col mt-[4rem] gap-[2rem] text-center">
-      <Header
+      <NonAnimatedHeader
         text={content.heading}
         extraStyling="w-fit mx-auto text-2xl"
         specifiedSizeInExtraStyling

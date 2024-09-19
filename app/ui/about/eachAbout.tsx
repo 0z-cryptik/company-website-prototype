@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Header } from "../header";
+import { NonAnimatedHeader } from "../header";
 import { About } from "./aboutType";
 import { IconWrapper } from "./iconWrapper";
 import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
@@ -52,7 +52,7 @@ export const EachAbout: React.FC<EachAboutType> = ({
         />
 
         <div className={textClass}>
-          <Header
+          <NonAnimatedHeader
             text={content.heading}
             extraStyling="w-[70%]"
           />
