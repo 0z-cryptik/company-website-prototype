@@ -3,6 +3,7 @@ import { HeroImage } from "./heroImage";
 import { NonAnimatedHeader } from "../header";
 import { CustomButton } from "../buttons/button";
 import { useList } from "@/app/hooks/context";
+import { serif } from "../fonts";
 
 export const HeroSection = () => {
   const header = "Turning Visions Into Vibrant Realities";
@@ -28,7 +29,7 @@ export const HeroSection = () => {
             extraStyling="lg:w-[70%] max-lg:leading-[3rem]"
           />
 
-          <p className="text-lg tracking-wider mt-5 text-gray-400 font-serif">
+          <p className={`${serif.className} text-lg tracking-wider mt-5 text-gray-400 font-serif`}>
             Helping new companies get the outreach they need
           </p>
 
