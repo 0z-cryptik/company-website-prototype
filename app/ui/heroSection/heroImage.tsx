@@ -9,8 +9,8 @@ export const HeroImage = () => {
       className={`heroSectionComponent2 sm:max-lg:mx-auto ${
         pageLoaded && "heroSectionComponent2Animation"
       }`}
-      src="/image1.png"
-      alt="a 3d image that portrays the idea of marketing"
+      src="/heroSection/marketing0.png"
+      alt="an image that portrays the idea of marketing"
       width={700}
       height={700}
     />

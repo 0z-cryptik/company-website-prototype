@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { inknutAntiqua } from "../../fonts";
+import { inknutAntiqua } from "../fonts";
 import { useState } from "react";
 
 interface EachServiceProps {
@@ -38,7 +38,7 @@ export const EachService: React.FC<EachServiceProps> = ({
       }`}
       style={{ "--i": delayOrder.toString() } as React.CSSProperties}>
       <Image
-        className="max-h-[70%]"
+        className="sm:max-h-[70%] max-h-[65%] max-sm:max-w-[70px]"
         src={image}
         alt={imageAlt}
         width={100}

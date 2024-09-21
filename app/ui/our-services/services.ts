@@ -29,7 +29,7 @@ export const services: Service[] = [
   {
     heading: "Social Media Management",
     text: "We manage your social media accounts to build your brand, engage with your audience, and grow your online presence.",
-    image: "/servicesIcons/social.png",
+    image: "/servicesIcons/tiktok0.png",
     imageAlt: ""
   },
   {
