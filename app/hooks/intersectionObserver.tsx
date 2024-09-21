@@ -30,13 +30,15 @@ export const useIntersectionObserver = (
       }
     }, options);
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    const refActive = containerRef.current;
+
+    if (refActive) {
+      observer.observe(refActive);
     }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (refActive) {
+        observer.unobserve(refActive);
       }
     };
   });
