@@ -7,8 +7,7 @@ interface Options {
 }
 
 export const useIntersectionObserver = (
-  threshold?: number,
-  observeOnce = true
+  threshold?: number
 ): [boolean, MutableRefObject<null>] => {
   const [visible, setVisible] = useState(false);
   const containerRef = useRef(null);
@@ -21,11 +20,9 @@ export const useIntersectionObserver = (
   };
 
   useEffect(() => {
-    //entry is destructured from an array of entries
     const observer = new IntersectionObserver(([entry]) => {
-      if (!observeOnce) {
-        setVisible(entry.isIntersecting);
-      } else if (observeOnce && entry.isIntersecting) {
+      if (entry.isIntersecting) {
+        // Set visible to true only the first time it becomes intersecting
         setVisible(true);
       }
     }, options);
@@ -41,7 +38,7 @@ export const useIntersectionObserver = (
         observer.unobserve(refActive);
       }
     };
-  });
+  }, [visible, options]);
 
   return [visible, containerRef];
 };

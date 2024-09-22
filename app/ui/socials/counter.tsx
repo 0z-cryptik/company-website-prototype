@@ -10,11 +10,13 @@ interface Counter {
 
 export const Counter: React.FC<Counter> = ({ end, duration }) => {
   const [value, setValue] = useState(0);
-
+  const [counting, setCounting] = useState(false);
   const [visible, containerRef] = useIntersectionObserver();
 
   const count = (): void => {
-    const interval = duration / end;
+    const interval = 1000 / 60; // Set a consistent frame rate (60fps)
+    const totalSteps = Math.floor(duration / interval);
+    const incrementValue = Math.ceil(end / totalSteps);
 
     const myInterval = setInterval(() => {
       setValue((prevValue) => {
@@ -22,10 +24,17 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
           clearInterval(myInterval);
           return end;
         }
-        return prevValue + 1;
+        return prevValue + incrementValue;
       });
     }, interval);
   };
+
+  useEffect(() => {
+    if (visible && !counting) {
+      setCounting(true);
+      count();
+    }
+  }, [visible, counting]);
 
   const formatValue = (): string => {
     const valStr = value.toString();
@@ -40,12 +49,6 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
     }
   };
 
-  useEffect(() => {
-    if (value != end && visible) {
-      count();
-    }
-  });
-
   return (
     <p
       ref={containerRef}
@@ -54,3 +57,4 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
     </p>
   );
 };
+
