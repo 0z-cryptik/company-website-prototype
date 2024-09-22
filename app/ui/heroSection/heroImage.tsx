@@ -1,13 +1,17 @@
 import Image from "next/image";
 import { useList } from "@/app/hooks/context";
 
-export const HeroImage = () => {
-  const { pageLoaded } = useList();
+interface Hero_Image{
+  animateIn: boolean
+}
+
+export const HeroImage: React.FC<Hero_Image> = ({animateIn}) => {
+  
 
   return (
     <Image
       className={`heroSectionComponent2 sm:max-lg:mx-auto ${
-        pageLoaded && "heroSectionComponent2Animation"
+        animateIn && "heroSectionComponent2Animation"
       }`}
       src="/heroSection/marketing0.png"
       alt="an image that portrays the idea of marketing"

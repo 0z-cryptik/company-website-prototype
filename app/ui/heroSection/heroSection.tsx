@@ -5,22 +5,18 @@ import { CustomButton } from "../buttons/button";
 import { useList } from "@/app/hooks/context";
 import { serif } from "../fonts";
 import { useEffect } from "react";
+import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 export const HeroSection = () => {
   const header = "Turning Visions Into Vibrant Realities";
-  const { pageLoaded, setPageLoaded } = useList();
-  
-  useEffect(() => {
-    if (document.readyState === "complete") {
-      setPageLoaded(true);
-    }
-  }, []);
+  //const { pageLoaded, setPageLoaded } = useList();
+  const [visible, containerRef] = useIntersectionObserver(0.65)
 
   return (
-    <section className="max-lg:w-[100svw] lg:flex lg:flex-row max-lg:text-center max-lg:pt-[10rem] lg:pt-[2.5rem]">
+    <section ref={containerRef} className="max-lg:w-[100svw] lg:flex lg:flex-row max-lg:text-center max-lg:pt-[10rem] lg:pt-[2.5rem]">
       <div
         className={`heroSectionComponent1 my-auto lg:w-1/2 max-lg:max-w-[80%] mx-auto ${
-          pageLoaded && "heroSectionComponent1Animation"
+          visible && "heroSectionComponent1Animation"
         }`}>
         <div className="lg:w-fit lg:ml-[6rem]">
           <NonAnimatedHeader
@@ -39,7 +35,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <HeroImage />
+      <HeroImage animateIn={visible} />
     </section>
   );
 };
