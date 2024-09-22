@@ -2,14 +2,11 @@
 import { HeroImage } from "./heroImage";
 import { NonAnimatedHeader } from "../header";
 import { CustomButton } from "../buttons/button";
-import { useList } from "@/app/hooks/context";
 import { serif } from "../fonts";
-import { useEffect } from "react";
 import { useIntersectionObserver } from "@/app/hooks/intersectionObserver";
 
 export const HeroSection = () => {
   const header = "Turning Visions Into Vibrant Realities";
-  //const { pageLoaded, setPageLoaded } = useList();
   const [visible, containerRef] = useIntersectionObserver(0.65)
 
   return (
