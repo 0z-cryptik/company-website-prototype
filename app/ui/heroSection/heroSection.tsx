@@ -4,18 +4,21 @@ import { NonAnimatedHeader } from "../header";
 import { CustomButton } from "../buttons/button";
 import { useList } from "@/app/hooks/context";
 import { serif } from "../fonts";
+import { useEffect } from "react";
 
 export const HeroSection = () => {
   const header = "Turning Visions Into Vibrant Realities";
   const { pageLoaded, setPageLoaded } = useList();
 
   //makes sure the code is being ran in a browser
-  if (
-    typeof window !== "undefined" &&
-    document.readyState === "complete"
-  ) {
-    setPageLoaded(true);
-  }
+  useEffect(() => {
+    if (
+      typeof window !== "undefined" &&
+      document.readyState === "complete"
+    ) {
+      setPageLoaded(true);
+    }
+  }, []);
 
   return (
     <section className="max-lg:w-[100svw] lg:flex lg:flex-row max-lg:text-center max-lg:pt-[10rem] lg:pt-[2.5rem]">
@@ -29,7 +32,8 @@ export const HeroSection = () => {
             extraStyling="lg:w-[70%] max-lg:leading-[3rem]"
           />
 
-          <p className={`${serif.className} text-lg tracking-wider mt-5 text-gray-400 font-serif`}>
+          <p
+            className={`${serif.className} text-lg tracking-wider mt-5 text-gray-400 font-serif`}>
             Helping new companies get the outreach they need
           </p>
 
