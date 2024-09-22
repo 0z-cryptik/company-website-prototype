@@ -9,13 +9,9 @@ import { useEffect } from "react";
 export const HeroSection = () => {
   const header = "Turning Visions Into Vibrant Realities";
   const { pageLoaded, setPageLoaded } = useList();
-
-  //makes sure the code is being ran in a browser
+  
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      document.readyState === "complete"
-    ) {
+    if (document.readyState === "complete") {
       setPageLoaded(true);
     }
   }, []);
