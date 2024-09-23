@@ -107,25 +107,16 @@ body {
   }
 }
 
-.scroll-content {
-  animation: scrollCarousel 5s linear infinite;
-  animation-delay: 0.5s; /* Starts after scaling finishes */
-}
-
 .partners {
   transform: translate3d(0, 0, 0);
 }
 
 .eachPartner {
   opacity: 0;
-  transform: scale(0.1);
-  transition: opacity 0.2s linear,
-    transform 0.5s cubic-bezier(0.17, 0.67, 0.66, 1.43);
-}
-
-.scaleUp {
-  transform: scale(1);
-  opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 0.1s linear,
+    transform 0.3s cubic-bezier(0.17, 0.67, 0.66, 1.43);
+  transition-delay: calc(0.1s * var(--i));
 }
 
 .heroSectionComponent1 {
@@ -143,7 +134,8 @@ body {
 }
 
 .heroSectionComponent1Animation,
-.heroSectionComponent2Animation {
+.heroSectionComponent2Animation,
+.scaleUp {
   opacity: 1;
   transform: translate(0, 0);
 }
@@ -171,7 +163,8 @@ body {
 }
 
 .viewMoreButton,
-.divider, .header {
+.divider,
+.header {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.05s ease,
