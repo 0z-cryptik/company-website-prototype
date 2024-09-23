@@ -10,7 +10,7 @@ export const HeroSection = () => {
   const [visible, containerRef] = useIntersectionObserver(0.65)
 
   return (
-    <section ref={containerRef} className="max-lg:w-[100svw] lg:flex lg:flex-row max-lg:text-center max-lg:pt-[10rem] lg:pt-[2.5rem]">
+    <section id="heroSection" ref={containerRef} className="max-lg:w-[100svw] lg:flex lg:flex-row max-lg:text-center max-lg:pt-[10rem] lg:pt-[2.5rem]">
       <div
         className={`heroSectionComponent1 my-auto lg:w-1/2 max-lg:max-w-[80%] mx-auto ${
           visible && "heroSectionComponent1Animation"

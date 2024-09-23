@@ -28,11 +28,11 @@ export const Navbar = () => {
       <Logo size="text-3xl" />
 
       <div className="ml-auto w-fit hidden lg:flex gap-x-12 font-semibold text-lg">
-        <a>{links[0]}</a>
-        <a>{links[1]}</a>
-        <a>{links[2]}</a>
-        <a>{links[3]}</a>
-        <a>{links[4]}</a>
+        <a href="#heroSection">{links[0]}</a>
+        <a href="#services">{links[1]}</a>
+        <a href="#about">{links[2]}</a>
+        <a href="#partners">{links[3]}</a>
+        <a href="#team">{links[4]}</a>
       </div>
 
       <MenuButton />

@@ -2,6 +2,6 @@ export const links: string[] = [
   "Home",
   "Services",
   "About",
-  "Portfolio",
+  "Partners",
   "Team"
 ];
