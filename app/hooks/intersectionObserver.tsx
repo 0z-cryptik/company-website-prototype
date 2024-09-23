@@ -1,4 +1,10 @@
-import { useState, useEffect, useRef, MutableRefObject } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  MutableRefObject,
+  useMemo
+} from "react";
 
 interface Options {
   root: null;
@@ -13,11 +19,13 @@ export const useIntersectionObserver = (
   const containerRef = useRef(null);
   const thresholdValue = threshold ? threshold : 1.0;
 
-  const options: Options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: thresholdValue
-  };
+  const options: Options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: "0px",
+      threshold: thresholdValue
+    };
+  }, [thresholdValue]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {

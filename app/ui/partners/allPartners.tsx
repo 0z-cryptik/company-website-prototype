@@ -11,12 +11,11 @@ export const AllPartners = () => {
 
   useEffect(() => {
     if (visible) {
-      // Delay the scrolling animation to allow the scale-up to happen first
       const timeoutId = setTimeout(() => {
         setStartScrolling(true);
-      }, 600); // Delay of 500ms to match the scaling transition
+      }, 600);
 
-      return () => clearTimeout(timeoutId); // Cleanup if component unmounts
+      return () => clearTimeout(timeoutId);
     } else {
       setStartScrolling(false);
     }
@@ -34,7 +33,6 @@ export const AllPartners = () => {
           <EachPartner
             key={i}
             src={partnerLogoLink}
-            scaleUp={visible}
           />
         ))}
       </div>

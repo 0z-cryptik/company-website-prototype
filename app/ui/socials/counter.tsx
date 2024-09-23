@@ -34,7 +34,7 @@ export const Counter: React.FC<Counter> = ({ end, duration }) => {
       setCounting(true);
       count();
     }
-  }, [visible, counting]);
+  }, [visible, counting, count]);
 
   const formatValue = (): string => {
     const valStr = value.toString();
